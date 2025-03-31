@@ -55,8 +55,6 @@ def simulate_bank(customers, num_windows):
     print(f"- Number of people not served: {num_not_served}")
     print()
 
-
-
 # Simulation with a priority queue for light work
 def simulate_with_priority_queue(customers, num_windows=10, light_window_share=0.3, threshold=7):
     # Separate customers
@@ -159,7 +157,7 @@ def plot_work_unit_distribution(customers, bins=160):
 
 plot_work_unit_distribution(customers,20)
 
-# one teller work 20 wuph
+# each teller handle 11 work unit per hour
 
 def simulate_variable_teller_speeds(customers, teller_speeds):
     num_tellers = len(teller_speeds)
@@ -202,7 +200,7 @@ def simulate_variable_teller_speeds(customers, teller_speeds):
     print(f"- Number of people not served: {not_served}")
     print()
 
-    print("=== Equal-Speed Tellers ===")
+    
 simulate_variable_teller_speeds(customers, teller_speeds=[11]*10)
 
 
